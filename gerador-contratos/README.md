@@ -5,6 +5,7 @@ Aplicativo web (roda 100% no navegador, sem servidor) para gerar contratos em **
 ## Como usar
 
 - **Online:** publique a pasta `gerador-contratos/` em qualquer hospedagem estática (GitHub Pages, Netlify, Vercel). Com https, o app funciona offline e pode ser instalado como aplicativo.
+- **Arquivo único:** `ContratoFacil.html` tem o sistema inteiro embutido — basta copiar para o computador e abrir com dois cliques (Chrome/Edge). É gerado automaticamente pelo `npm run build`.
 - **Local:** abra `index.html` no Chrome/Edge (ou rode `python3 -m http.server` dentro da pasta).
 
 ## O que já vem pronto

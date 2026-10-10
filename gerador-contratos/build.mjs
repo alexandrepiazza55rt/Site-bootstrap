@@ -1,7 +1,7 @@
 // Build do ContratoFácil: empacota src/ em app.js (IIFE) — funciona até abrindo o index.html direto do disco.
 // Uso: npm run build   |   npm run watch
 import * as esbuild from 'esbuild';
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 
 const watch = process.argv.includes('--watch');
 const entries = process.env.ENTRY ? process.env.ENTRY.split(',') : ['src/main.js'];
@@ -32,6 +32,13 @@ if (watch) {
     // versão do service worker (força atualização do cache a cada build)
     const sw = readFileSync('sw.src.js', 'utf8').replace('__BUILD__', Date.now().toString(36));
     writeFileSync('sw.js', sw);
+    // versão "arquivo único": tudo embutido num só .html (abre com dois cliques, sem internet)
+    let html = readFileSync('index.html', 'utf8');
+    const css = readFileSync('app.css', 'utf8');
+    const js = readFileSync('app.js', 'utf8').replace(/<\/script/g, '<\\/script');
+    html = html.replace('<link rel="stylesheet" href="app.css">', () => '<style>' + css + '</style>')
+      .replace('<script src="app.js"></script>', () => '<script>' + js + '</script>')
+      .replace('<link rel="manifest" href="manifest.webmanifest">', '');
+    writeFileSync('ContratoFacil.html', html);
   }
-  mkdirSync('.', { recursive: true });
 }

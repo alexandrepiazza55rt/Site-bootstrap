@@ -1,5 +1,5 @@
 // Service worker: guarda o aplicativo para funcionar offline.
-const CACHE = 'contratofacil-mv2hdi0w';
+const CACHE = 'contratofacil-mv2hfr0y';
 const ASSETS = ['./', './index.html', './app.js', './app.css', './manifest.webmanifest', './assets/icons/icon.svg', './assets/icons/icon-192.png', './assets/icons/icon-512.png'];
 
 self.addEventListener('install', (e) => {
