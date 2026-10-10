@@ -1,0 +1,20 @@
+{
+  "name": "gerador-contratos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ContratoFácil — gerador de contratos com modelos Word (.docx), campos inteligentes e exportação Word/PDF.",
+  "scripts": {
+    "build": "node build.mjs",
+    "watch": "node build.mjs --watch"
+  },
+  "dependencies": {
+    "htm": "3.1.1",
+    "jszip": "3.10.1",
+    "lucide": "^0.460.0",
+    "preact": "10.26.9"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.10"
+  },
+  "type": "module"
+}

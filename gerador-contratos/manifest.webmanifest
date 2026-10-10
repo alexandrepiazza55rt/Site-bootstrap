@@ -1,0 +1,17 @@
+{
+  "name": "ContratoFácil — Gerador de Contratos",
+  "short_name": "ContratoFácil",
+  "description": "Contratos em Word e PDF a partir dos seus modelos, com campos inteligentes.",
+  "lang": "pt-BR",
+  "start_url": "./#/",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f5f9",
+  "theme_color": "#2563eb",
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
